@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+
+  <h1>Tugas 3 Assignment PBP/PBD</h1>
+
+  <h5>Name: </h5>
+  <b>{{nama}}</b>
+
+  <h5>Student ID: </h5>
+  <b>{{student_id}}</b>
+
+  <table>
+    <tr>
+      <th>Movie Title</th>
+      <th>Release Date</th>
+      <th>Watch Status</th>
+      <th>Movie Rating</th>
+      <th>Movie Review</th>
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for data in watchlist %}
+        <tr>
+            <th>{{data.movie_title}}</th>
+            <th>{{data.release_date}}</th>
+            <th>{{data.watched}}</th>
+            <th>{{data.movie_rating}}</th>
+            <th>{{data.movie_review}}</th>
+        </tr>
+    {% endfor %}
+  </table>
+
+ {% endblock content %}

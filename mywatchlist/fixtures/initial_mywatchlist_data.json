@@ -1,0 +1,112 @@
+[
+    {
+        "model": "mywatchlist.watchlistmovie",
+        "pk": 1,
+        "fields": {
+            "movie_title": "Happiness",
+            "release_date": "5/11/2021",
+            "watched": "Watched",
+            "movie_rating": 4,
+            "movie_review": "Good ending, no heartbreak."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistmovie",
+        "pk": 2,
+        "fields": {
+            "movie_title": "Little Women",
+            "release_date": "3/09/2022",
+            "watched": "Ongoing",
+            "movie_rating": 4,
+            "movie_review": "Thick plot, plot twist after plot twist."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistmovie",
+        "pk": 3,
+        "fields": {
+            "movie_title": "Girl From Nowhere",
+            "release_date": "8/08/2018",
+            "watched": "Ongoing",
+            "movie_rating": 3,
+            "movie_review": "Only liked 1 episode."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistmovie",
+        "pk": 4,
+        "fields": {
+            "movie_title": "All of Us Are Dead",
+            "release_date": "28/01/2022",
+            "watched": "Watched",
+            "movie_rating": 5,
+            "movie_review": "5/5 amazing chemistry buildup, not forced at all, loved multiple couples and characters, sad it ended."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistmovie",
+        "pk": 5,
+        "fields": {
+            "movie_title": "Business Proposal",
+            "release_date": "28/02/2022",
+            "watched": "Ongoing",
+            "movie_rating": 4,
+            "movie_review": "Acting was ok, story is interesting but what really saved it was the cast and pairings."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistmovie",
+        "pk": 6,
+        "fields": {
+            "movie_title": "Brooklyn Nine-Nine",
+            "release_date": "17/09/2013",
+            "watched": "Ongoing",
+            "movie_rating": 4,
+            "movie_review": "Lighthearted easy watch, jokes are sometimes great sometimes meh but the cast is amazing."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistmovie",
+        "pk": 7,
+        "fields": {
+            "movie_title": "Modern Family",
+            "release_date": "23/09/2009",
+            "watched": "Ongoing",
+            "movie_rating": 5,
+            "movie_review": "I DONT WANT TO FINISH THIS (complimentary)"
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistmovie",
+        "pk": 8,
+        "fields": {
+            "movie_title": "Fresh off the Boat",
+            "release_date": "4/02/2015",
+            "watched": "Ongoing",
+            "movie_rating": 4,
+            "movie_review": "Give off a sense of nostalgia, very relatable towards immigrant children."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistmovie",
+        "pk": 9,
+        "fields": {
+            "movie_title": "Vincenzo",
+            "release_date": "10/02/2021",
+            "watched": "Ongoing",
+            "movie_rating": 3,
+            "movie_review": "Did not like the acting but sometimes it was funny."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistmovie",
+        "pk": 10,
+        "fields": {
+            "movie_title": "Train to Busan",
+            "release_date": "N/A/07/2016",
+            "watched": "Watched",
+            "movie_rating": 5,
+            "movie_review": "SAD JANGAN NONTON BUT ITS GOOD NONTON AJA."
+        }
+    }
+]
