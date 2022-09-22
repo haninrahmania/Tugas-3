@@ -19,3 +19,8 @@ Membuat 2 secret repo, yang satu HEROKU_API_KEY isinya api key Heroku. Satunya l
 Membuka 'actions' pada repo github lalu mere-run all jobs untuk failed deployment.
 
 Membuka aplikasi melalui link https://tugas3pbphanin.herokuapp.com/mywatchlist/
+
+![image](https://user-images.githubusercontent.com/112334401/191660882-00a6f171-e749-4c18-b063-312c8c6fcc7a.png)
+![image](https://user-images.githubusercontent.com/112334401/191661007-959b0c07-be2c-4ebc-8986-8e06c7a2c472.png)
+![image](https://user-images.githubusercontent.com/112334401/191661092-4a189133-f616-4b23-9c21-5bbe6733f9ed.png)
+
