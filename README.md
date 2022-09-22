@@ -1,62 +1,21 @@
-# Template Proyek Django PBP
+Link menuju aplikasi Heroku Tugas 3: https://tugas3pbphanin.herokuapp.com/mywatchlist/
 
-Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
+1. Perbedaan antara JSON, XML dan HTML:
+- Penyimpanan Elemen. Cara penyimpanan elemen pada JSON efisien, namun kurang rapi untuk dilihat. XML menyimpan elemen elemennya secara kurang efisien, namun terstruktur sehingga mudah dibaca oleh manusia dan mesin. Sedangkan HTML elemennya tersimpan secara sederhana dan relatif mudah dibaca, dengan kode sederhana (tag dan attribute) untuk mark up halaman website.
+- Ekstensi File. File JSON diakhiri ekstensi .json, file XML .xml, dan file HTML .html atau .htm.
+- Implementasi. JSON digunakan untuk mengirimkan data dengan cara diuraikan dan dikirim melalui internet. Data XML lebih terstruktur dan user dapat menggunakannya untuk menambah catatan. HTML digunakan sebagai bahasa markup yang kini dianggap sebagai standar web resmi.
 
-*Read this in other languages: [Indonesian](README.md), [English](README.en.md)*
+2. Pentingnya data delivery dalam pengimplementasian sebuah platform:
+Data delivery penting dalam pengimplementasian sebuah platform karena data delivery merupakan suatu proses memindahkan data dari suatu platform menuju platform lainnya. Data tersebut dapan berupa berbagai format, seperti JSON, XML, dan HTML.
 
-## Pendahuluan
+3. Pertama saya membuat folder mywatchlist dan membuka views.py yang terdapat pada folder mywatchlist dan membuat suatu fungsi show_watchlist yang menerima parameter 'request' dan mengembalikan 'render(request,"mywatchlist.html")'. Lalu saya import models yang sudah tersedia kedalam berkas views.py untuk melakukan pengambilan data dari database dengan 'from mywatchlist.models import WatchlistItem'. Kedalam fungsi show_watchlist saya masukkan kode untuk memanggil fungsi query ke model database dan menyimpan hasil query tersebut ke dalam variabel dan menambahkan parameter ketiga yaitu 'context' pada pengembalian fungsi render supaya data pada variabel context tersebut akan dirender oleh django sehingga data tersebut dapat muncul pada halaman html. Kemudian saya mengubah beberapa hal pada berkas mywatchlist.html pada folder templates dalam mywatchlist, seperti item yang akan di display. Pada berkas urls.py dalam folder mywatchlist saya membuat routing terhadap fungsi views yang sudah dibuat sebelumnya sehingga halaman html, xml, dan json dapat ditampilan pada browser, yang berisikan app name, yaitu mywatchlist, dan urlpatterns yang berisi 'path('', show_watchlist, name='show_watchlist'),'. Setelah itu saya daftarkan aplikasi mywatchlist ke dalam berkas urls.py pada folder project_django dengan memasukkan 'path('mywatchlist/', include('mywatchlist.urls')),'. Saya melakukan iterasi terhadap variabel 'data_watchlist' untuk menampilkan details watchlist. Untuk melakukan deployment ke Heroku terhadap aplikasi yang sudah saya buat saya melakukan step-step berikut:
 
-Repositori ini merupakan sebuah template yang dirancang untuk membantu mahasiswa yang sedang mengambil mata kuliah Pemrograman Berbasis Platform (CSGE602022) mengetahui struktur sebuah proyek aplikasi Django serta file dan konfigurasi yang penting dalam berjalannya aplikasi. Kamu dapat dengan bebas menyalin isi dari repositori ini atau memanfaatkan repositori ini sebagai pembelajaran sekaligus awalan dalam membuat sebuah proyek Django.
+Buat aplikasi di Heroku
 
-## Cara Menggunakan
+Ke github bagian settings, cari secrets dan pilih actions, klik 'Create new secret repository'
 
-Apabila kamu ingin menggunakan repositori ini sebagai repositori awalan yang nantinya akan kamu modifikasi:
+Membuat 2 secret repo, yang satu HEROKU_API_KEY isinya api key Heroku. Satunya lagi HEROKU_APP_NAME isinya nama aplikasi yang dibuat pada Heroku.
 
-1. Buka laman GitHub repositori templat kode, lalu klik tombol "**Use this template**"
-   untuk membuat salinan repositori ke dalam akun GitHub milikmu.
-2. Buka laman GitHub repositori yang dibuat dari templat, lalu gunakan perintah
-   `git clone` untuk menyalin repositorinya ke suatu lokasi di dalam sistem
-   berkas (_filesystem_) komputermu:
+Membuka 'actions' pada repo github lalu mere-run all jobs untuk failed deployment.
 
-   ```shell
-   git clone <URL ke repositori di GitHub> <path ke suatu lokasi di filesystem>
-   ```
-3. Masuk ke dalam repositori yang sudah di-_clone_ dan jalankan perintah berikut
-   untuk menyalakan _virtual environment_:
-
-   ```shell
-   python -m venv env
-   ```
-4. Nyalakan environment dengan perintah berikut:
-
-   ```shell
-   # Windows
-   .\env\Scripts\activate
-   # Linux/Unix, e.g. Ubuntu, MacOS
-   source env/bin/activate
-   ```
-5. Install dependencies yang dibutuhkan untuk menjalankan aplikasi dengan perintah berikut:
-
-   ```shell
-   pip install -r requirements.txt
-   ```
-
-6. Jalankan aplikasi Django menggunakan server pengembangan yang berjalan secara
-   lokal:
-
-   ```shell
-   python manage.py runserver
-   ```
-7. Bukalah `http://localhost:8000` pada browser favoritmu untuk melihat apakah aplikasi sudah berjalan dengan benar.
-
-## Contoh Deployment 
-
-Pada template ini, deployment dilakukan dengan memanfaatkan GitHub Actions sebagai _runner_ dan Heroku sebagai platform Hosting aplikasi. 
-
-Untuk melakukan deployment, kamu dapat melihat instruksi yang ada pada [Tutorial 0](https://pbp-fasilkom-ui.github.io/ganjil-2023/assignments/tutorial/tutorial-0).
-
-Untuk contoh aplikasi Django yang sudah di deploy, dapat kamu akses di [https://django-pbp-template.herokuapp.com/](https://django-pbp-template.herokuapp.com/)
-
-## Credits
-
-Template ini dibuat berdasarkan [PBP Ganjil 2021](https://gitlab.com/PBP-2021/pbp-lab) yang ditulis oleh Tim Pengajar Pemrograman Berbasis Platform 2021 ([@prakashdivyy](https://gitlab.com/prakashdivyy)) dan [django-template-heroku](https://github.com/laymonage/django-template-heroku) yang ditulis oleh [@laymonage, et al.](https://github.com/laymonage). Template ini dirancang sedemikian rupa sehingga mahasiswa dapat menjadikan template ini sebagai awalan serta acuan dalam mengerjakan tugas maupun dalam berkarya.
+Membuka aplikasi melalui link https://tugas3pbphanin.herokuapp.com/mywatchlist/
